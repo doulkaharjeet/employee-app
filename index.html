@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html ng-app="employeeApp">
+<html ng-app="employeeApp">  <!--starts Angular app. Start the app named employeeApp here-->
 
 <head>
     <meta charset="UTF-8">
 
     <title>Employee App</title>
 
-    <!-- AngularJS -->
+    <!-- AngularJS --> <!--  core AngularJS framework -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 
-    <!-- Angular Route -->
+    <!-- Angular Route --> <!--enables page navigation without reload (SPA)-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
 
     <!-- Main App -->
-    <script src="app.js"></script>
+    <script src="app.js"></script>  <!-- module creation, routing setup, app configuration-->
 
-    <!-- Services -->
-    <script src="services/EmployeeService.js"></script>
+    <!-- Services --> <!--API calls,storing data, CRUD operations-->
+    <script src="services/EmployeeService.js"></script>  <!-- Handles Data Logic-->
 
-    <!-- Controllers -->
+    <!-- Controllers -->  <!-- UI ↔ Service ↔ Data --> 
+    <!--the brain of pages-->
     <script src="controllers/HomeController.js"></script>
     <script src="controllers/EmployeeController.js"></script>
 
@@ -27,13 +28,12 @@
 <body>
 
     <h1>Employee Management System</h1>
-
-    <a href="#!/">Home</a> |
+    <!-- Angular Routing -->
+    <a href="#!/">Home</a> 
     <a href="#!/employees">Employees</a>
 
     <hr>
-
-    <div ng-view></div>
-
+    <!-- pages are loaded dynamically, controled by app.js routes-->
+    <div ng-view></div>     
 </body>
 </html>
